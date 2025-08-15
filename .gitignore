@@ -1,0 +1,41 @@
+# APK files (binary)
+*.apk
+
+# Temporary files
+*.tmp
+*.xml.bak
+window_dump*.xml
+main_menu.xml
+media_screen.xml
+home_screen.xml
+
+# Java keystore files
+*.keystore
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Large binary files
+uber-apk-signer.jar
+
+# Build directories
+xiaomi_glasses_galaxy_modified/build/
+xiaomi_glasses_official_decoded/
+
+# Large resource files
+*.dex
+*.png
+*.jpg
+*.mp3
+*.zip
+*.bin
+*.prof
+*.profm
