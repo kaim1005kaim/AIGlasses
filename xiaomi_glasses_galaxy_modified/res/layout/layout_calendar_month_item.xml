@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="40.0sp" android:textColor="@color/white" android:id="@id/txt_year" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="35.0dip" />
+    <com.superhexa.supervision.library.base.customviews.calendar.view.MonthCalendarView android:id="@id/monthCalendar" android:layout_width="fill_parent" android:layout_height="200.0dip" app:calendarTxtFontRes="@font/misanslatin_bold" app:hollowCircleColor="@color/white" app:hollowCircleStroke="1.5dip" app:layout_scrollFlags="scroll" app:selectCircleColor="@color/white" app:selectCircleRadius="28.0dip" />
+</LinearLayout>

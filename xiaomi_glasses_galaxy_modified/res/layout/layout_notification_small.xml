@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/root" android:background="#e5111111" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/notification_icon" android:layout_width="@dimen/dp_42" android:layout_height="@dimen/dp_42" android:src="@mipmap/ic_standby_notification" android:contentDescription="@string/app_name" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="@dimen/dp_42" android:layout_weight="1.0" android:layout_marginStart="@dimen/dp_8">
+        <TextView android:textSize="@dimen/sp_18" android:textColor="#e5ffffff" android:id="@id/notification_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="textStart" android:textFontWeight="500" />
+        <TextView android:textSize="@dimen/sp_14" android:textColor="#b2ffffff" android:id="@id/notification_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/notification_title" android:textFontWeight="330" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/ib_hang_up" android:background="@drawable/ic_standby_close_notification" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:contentDescription="@string/app_name" android:layout_marginStart="@dimen/dp_12" />
+</LinearLayout>

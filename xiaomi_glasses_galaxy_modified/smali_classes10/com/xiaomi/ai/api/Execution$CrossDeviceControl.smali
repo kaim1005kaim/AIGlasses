@@ -1,0 +1,300 @@
+.class public Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/xiaomi/ai/api/common/InstructionPayload;
+
+
+# annotations
+.annotation runtime Lcom/xiaomi/ai/api/common/NamespaceName;
+    name = "CrossDeviceControl"
+    namespace = "Execution"
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xiaomi/ai/api/Execution;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "CrossDeviceControl"
+.end annotation
+
+
+# instance fields
+.field private device_id:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private guiding_tts:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private guiding_url:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private instructions:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/fasterxml/jackson/databind/node/ArrayNode;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private native_device_id:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private query:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->query:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->instructions:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->device_id:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_tts:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_url:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->native_device_id:Lcom/xiaomi/common/Optional;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getDeviceId()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->device_id:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getGuidingTts()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_tts:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getGuidingUrl()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_url:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getInstructions()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/fasterxml/jackson/databind/node/ArrayNode;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->instructions:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getNativeDeviceId()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->native_device_id:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getQuery()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->query:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setDeviceId(Ljava/lang/String;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->device_id:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setGuidingTts(Ljava/lang/String;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_tts:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setGuidingUrl(Ljava/lang/String;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->guiding_url:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setInstructions(Lcom/fasterxml/jackson/databind/node/ArrayNode;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->instructions:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setNativeDeviceId(Ljava/lang/String;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->native_device_id:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setQuery(Ljava/lang/String;)Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;
+    .locals 0
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/Execution$CrossDeviceControl;->query:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method

@@ -1,0 +1,183 @@
+.class Lorg/bouncycastle/tsp/TimeStampToken$CertID;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/bouncycastle/tsp/TimeStampToken;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "CertID"
+.end annotation
+
+
+# instance fields
+.field private a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+.field private b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+.field final synthetic c:Lorg/bouncycastle/tsp/TimeStampToken;
+
+
+# direct methods
+.method constructor <init>(Lorg/bouncycastle/tsp/TimeStampToken;Lorg/bouncycastle/asn1/ess/ESSCertID;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->c:Lorg/bouncycastle/tsp/TimeStampToken;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    return-void
+.end method
+
+.method constructor <init>(Lorg/bouncycastle/tsp/TimeStampToken;Lorg/bouncycastle/asn1/ess/ESSCertIDv2;)V
+    .locals 0
+
+    .line 2
+    iput-object p1, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->c:Lorg/bouncycastle/tsp/TimeStampToken;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()[B
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ess/ESSCertID;->g()[B
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    iget-object p0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ess/ESSCertIDv2;->g()[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public b()Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    if-eqz v0, :cond_0
+
+    new-instance p0, Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    sget-object v0, Lorg/bouncycastle/asn1/oiw/OIWObjectIdentifiers;->i:Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;-><init>(Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;)V
+
+    return-object p0
+
+    :cond_0
+    iget-object p0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ess/ESSCertIDv2;->h()Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    if-eqz v0, :cond_0
+
+    const-string p0, "SHA-1"
+
+    return-object p0
+
+    :cond_0
+    sget-object v0, Lorg/bouncycastle/asn1/nist/NISTObjectIdentifiers;->c:Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    iget-object v1, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/ess/ESSCertIDv2;->h()Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;->g()Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/ASN1Primitive;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string p0, "SHA-256"
+
+    return-object p0
+
+    :cond_1
+    iget-object p0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ess/ESSCertIDv2;->h()Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/AlgorithmIdentifier;->g()Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ASN1ObjectIdentifier;->r()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public d()Lorg/bouncycastle/asn1/x509/IssuerSerial;
+    .locals 1
+
+    iget-object v0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->a:Lorg/bouncycastle/asn1/ess/ESSCertID;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ess/ESSCertID;->i()Lorg/bouncycastle/asn1/x509/IssuerSerial;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    iget-object p0, p0, Lorg/bouncycastle/tsp/TimeStampToken$CertID;->b:Lorg/bouncycastle/asn1/ess/ESSCertIDv2;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ess/ESSCertIDv2;->j()Lorg/bouncycastle/asn1/x509/IssuerSerial;
+
+    move-result-object p0
+
+    return-object p0
+.end method

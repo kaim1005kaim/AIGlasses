@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition app:constraintSetEnd="@id/media_detail_landscope_fold" app:constraintSetStart="@id/media_detail_portrait" app:duration="150" app:motionInterpolator="onInterceptTouchReturnSwipe" />
+    <Transition app:constraintSetEnd="@id/media_detail_landscope_unfold" app:constraintSetStart="@id/media_detail_landscope_fold" app:duration="200" app:motionInterpolator="onInterceptTouchReturnSwipe" />
+    <ConstraintSet android:id="@id/media_detail_portrait">
+        <Constraint android:id="@id/vp" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/clBottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="horizontal" android:id="@id/clBottom" android:layout_width="0.0dip" android:layout_height="@dimen/dp_80" android:layout_margin="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        <Constraint android:id="@id/topBg" android:background="@color/pageBackground" android:layout_width="0.0dip" android:layout_height="@dimen/dp_65" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/media_detail_landscope_fold">
+        <Constraint android:id="@id/vp" android:background="@color/black_10" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginStart="@dimen/dp_80" android:layout_marginEnd="@dimen/dp_80" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="horizontal" android:id="@id/clBottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginEnd="@dimen/dp_20" app:layout_constraintBottom_toBottomOf="@id/topBg" app:layout_constraintEnd_toStartOf="@id/containerIfvSwitch2" app:layout_constraintTop_toTopOf="@id/topBg" />
+        <Constraint android:id="@id/topBg" android:background="@color/black_60" android:layout_width="0.0dip" android:layout_height="@dimen/dp_54" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/media_detail_landscope_unfold">
+        <Constraint android:id="@id/vp" android:background="@color/black_10" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginStart="@dimen/dp_80" android:layout_marginEnd="@dimen/dp_80" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="horizontal" android:id="@id/clBottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginEnd="@dimen/dp_20" app:layout_constraintBottom_toBottomOf="@id/topBg" app:layout_constraintEnd_toStartOf="@id/containerIfvSwitch2" app:layout_constraintTop_toTopOf="@id/topBg" />
+        <Constraint android:id="@id/topBg" android:background="@color/black_60" android:layout_width="0.0dip" android:layout_height="@dimen/dp_54" app:layout_constraintBottom_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

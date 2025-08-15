@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bgBottom" android:background="@drawable/bg_top_round_rectangle_27" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="@dimen/dp_290" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/image" android:layout_width="@dimen/dp_80" android:layout_height="@dimen/dp_80" android:layout_marginTop="@dimen/dp_85" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/bgBottom" app:lottie_fileName="success.json" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_13" android:textColor="@color/white" android:id="@id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_16" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

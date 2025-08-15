@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.superhexa.supervision.library.base.customviews.TitleBarLayout android:id="@id/titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:title="@string/persionSex" />
+    <RadioGroup android:orientation="vertical" android:id="@id/radioGroup" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_27" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/titlebar">
+        <androidx.appcompat.widget.AppCompatRadioButton android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/radioMale" android:background="@drawable/radio_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dp_56" android:button="@null" android:text="@string/male" android:drawableEnd="@drawable/radio_selector" android:paddingStart="@dimen/dp_28" android:paddingEnd="@dimen/dp_28" />
+        <androidx.appcompat.widget.AppCompatRadioButton android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/radioFemale" android:background="@drawable/radio_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/dp_56" android:button="@null" android:text="@string/female" android:drawableEnd="@drawable/radio_selector" android:paddingStart="@dimen/dp_28" android:paddingEnd="@dimen/dp_28" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.superhexa.supervision.feature.home.presentation.view.WrapFolderRecyclerView android:id="@id/folderRecyclerView" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/dp_112" android:overScrollMode="never" android:paddingStart="@dimen/dp_6" app:layout_constraintTop_toTopOf="parent" />
+    <Space android:id="@id/viewSpace" android:visibility="gone" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_11" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/folderRecyclerView" />
+    <com.superhexa.supervision.feature.home.presentation.view.WrapNestedScrollableHost android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/viewSpace">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    </com.superhexa.supervision.feature.home.presentation.view.WrapNestedScrollableHost>
+</androidx.constraintlayout.widget.ConstraintLayout>

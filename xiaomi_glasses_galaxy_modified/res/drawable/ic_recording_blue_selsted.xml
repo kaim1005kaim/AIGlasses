@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="20.0dip" android:width="20.0dip" android:viewportWidth="20.0" android:viewportHeight="20.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_recording_blue_selsted__0" android:pathData="M10,10m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    <path android:fillColor="#ffffffff" android:pathData="M14.342,8.394C14.576,8.16 14.576,7.78 14.342,7.546L13.776,6.98C13.542,6.746 13.162,6.746 12.928,6.98L9.104,10.804L7.394,9.093C7.159,8.859 6.78,8.859 6.545,9.093L5.98,9.659C5.745,9.893 5.745,10.273 5.98,10.507L8.667,13.194C8.722,13.25 8.786,13.292 8.854,13.322C9.077,13.426 9.35,13.386 9.534,13.203L14.342,8.394Z" android:fillType="evenOdd" />
+</vector>

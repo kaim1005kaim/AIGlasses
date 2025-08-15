@@ -1,0 +1,122 @@
+.class public Lcom/xiaomi/ai/api/UIController$DisplayMetrics;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xiaomi/ai/api/UIController;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "DisplayMetrics"
+.end annotation
+
+
+# instance fields
+.field private height:D
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+.end field
+
+.field private id:Ljava/lang/String;
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+.end field
+
+.field private width:D
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;DD)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->id:Ljava/lang/String;
+
+    .line 4
+    iput-wide p2, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->width:D
+
+    .line 5
+    iput-wide p4, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->height:D
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getHeight()D
+    .locals 2
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iget-wide v0, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->height:D
+
+    return-wide v0
+.end method
+
+.method public getId()Ljava/lang/String;
+    .locals 0
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->id:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public getWidth()D
+    .locals 2
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iget-wide v0, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->width:D
+
+    return-wide v0
+.end method
+
+.method public setHeight(D)Lcom/xiaomi/ai/api/UIController$DisplayMetrics;
+    .locals 0
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iput-wide p1, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->height:D
+
+    return-object p0
+.end method
+
+.method public setId(Ljava/lang/String;)Lcom/xiaomi/ai/api/UIController$DisplayMetrics;
+    .locals 0
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->id:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public setWidth(D)Lcom/xiaomi/ai/api/UIController$DisplayMetrics;
+    .locals 0
+    .annotation runtime Lcom/xiaomi/ai/api/common/Required;
+    .end annotation
+
+    iput-wide p1, p0, Lcom/xiaomi/ai/api/UIController$DisplayMetrics;->width:D
+
+    return-object p0
+.end method

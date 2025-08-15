@@ -1,0 +1,139 @@
+.class public abstract Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+.super Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Object;
+.source "SourceFile"
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static fromByteArray([B)Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    new-instance v0, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1InputStream;
+
+    invoke-direct {v0, p0}, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1InputStream;-><init>([B)V
+
+    :try_start_0
+    invoke-virtual {v0}, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p0
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/io/IOException;
+
+    const-string v0, "Extra data detected in stream"
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance p0, Ljava/io/IOException;
+
+    const-string v0, "cannot recognise object in stream"
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method abstract asn1Equals(Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;)Z
+.end method
+
+.method abstract encode(Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1OutputStream;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method abstract encodedLength()I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Encodable;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Encodable;
+
+    invoke-interface {p1}, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Encodable;->toASN1Primitive()Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;->asn1Equals(Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public abstract hashCode()I
+.end method
+
+.method abstract isConstructed()Z
+.end method
+
+.method public toASN1Primitive()Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method toDERObject()Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method toDLObject()Lcom/xiaomi/miot/ble/bouncycastle/asn1/ASN1Primitive;
+    .locals 0
+
+    return-object p0
+.end method

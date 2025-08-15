@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition app:constraintSetEnd="@id/vp_video_landscope_fold" app:constraintSetStart="@id/vp_video_portrait" app:duration="150" app:motionInterpolator="onInterceptTouchReturnSwipe" />
+    <Transition app:constraintSetEnd="@id/vp_video_landscope_unfold" app:constraintSetStart="@id/vp_video_landscope_fold" app:duration="200" app:motionInterpolator="onInterceptTouchReturnSwipe" />
+    <Transition app:constraintSetEnd="@id/end" app:constraintSetStart="@id/start" app:duration="500" />
+    <ConstraintSet android:id="@id/start">
+        <Constraint android:id="@id/ivPlayToggle222" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:visibilityMode="normal" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/end">
+        <Constraint android:id="@id/ivPlayToggle222" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:visibilityMode="ignore" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/vp_video_portrait">
+        <Constraint android:id="@id/baseVideoViewWrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/dp_58" app:layout_constraintBottom_toTopOf="@id/llBottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="vertical" android:id="@id/llBottom" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute app:attributeName="background" app:customColorDrawableValue="@color/transparent" />
+        </Constraint>
+        <Constraint android:id="@id/ivMuteToggle" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ic_o95_selector_mute" android:contentDescription="@null" android:layout_marginEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/llBottom" app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/ll_quality_status_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_100" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:visibilityMode="ignore" />
+        <Constraint android:id="@id/preview" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/dp_58" app:layout_constraintBottom_toTopOf="@id/llBottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/vp_video_landscope_fold">
+        <Constraint android:id="@id/baseVideoViewWrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="vertical" android:id="@id/llBottom" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute app:attributeName="background" app:customColorDrawableValue="@color/black_60" />
+        </Constraint>
+        <Constraint android:id="@id/ivMuteToggle" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ic_o95_selector_mute" android:contentDescription="@null" android:alpha="1.0" android:layout_marginEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/llBottom" app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/ll_quality_status_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_100" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:visibilityMode="ignore" />
+        <Constraint android:id="@id/previewOrFailedWrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/vp_video_landscope_unfold">
+        <Constraint android:id="@id/baseVideoViewWrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Constraint android:orientation="vertical" android:id="@id/llBottom" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="parent">
+            <CustomAttribute app:attributeName="background" app:customColorDrawableValue="@color/black_60" />
+        </Constraint>
+        <Constraint android:id="@id/ivMuteToggle" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/ic_o95_selector_mute" android:contentDescription="@null" android:alpha="0.0" android:layout_marginEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/llBottom" app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint android:id="@id/ll_quality_status_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_100" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:visibilityMode="ignore" />
+        <Constraint android:id="@id/previewOrFailedWrapper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+</MotionScene>

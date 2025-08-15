@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Kunming.AppWidgetContainer" android:orientation="vertical" android:id="@id/awRoot" android:background="@drawable/app_widget_background" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Kunming.AppWidget.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_88" android:layout_marginTop="@dimen/dp_10" android:baselineAligned="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="160.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp_13" android:textColor="@color/white_80" android:ellipsize="end" android:gravity="center" android:id="@id/awTvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" android:text="@string/unconnectedTitle" android:maxLines="1" android:drawableEnd="@drawable/app_widget_arrow" android:layout_marginStart="@dimen/dp_16" />
+            <TextView android:textSize="@dimen/sp_24" android:textStyle="bold" android:textColor="@color/white" android:id="@id/awTvBattery" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:layout_marginStart="@dimen/dp_16" />
+            <TextView android:textSize="@dimen/sp_24" android:textStyle="bold" android:textColor="@color/white" android:id="@id/awTvConnect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="@string/unconnected" android:layout_marginStart="@dimen/dp_16" />
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:gravity="center" android:id="@id/awUpdate" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/dp_2" android:drawableEnd="@drawable/app_widget_refresh" android:layout_marginStart="@dimen/dp_16" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_88" android:layout_weight="1.0">
+            <ImageView android:id="@id/awIvIcon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/appwidget_default_icon" android:scaleType="fitCenter" />
+            <ImageView android:layout_width="@dimen/dp_110" android:layout_height="@dimen/dp_24" android:src="@mipmap/app_widget_mask" android:scaleType="fitCenter" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:id="@id/awQuick" android:background="@drawable/app_widget_quick_background" android:layout_width="fill_parent" android:layout_height="@dimen/dp_60">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llAWGame" android:layout_width="@dimen/dp_82" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/awTvGame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ssGameMode" android:drawableTop="@drawable/app_widget_icon_game" android:drawablePadding="@dimen/dp_4" />
+        </LinearLayout>
+        <ImageView android:id="@id/awLine1" android:layout_width="@dimen/dp_1" android:layout_height="@dimen/dp_20" android:src="@drawable/app_widget_line" android:contentDescription="line" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llAWNotify" android:layout_width="@dimen/dp_82" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/awTvNotify" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ssNotifySpeech" android:drawableTop="@drawable/app_widget_icon_notify" android:drawablePadding="@dimen/dp_4" />
+        </LinearLayout>
+        <ImageView android:id="@id/awLine2" android:layout_width="@dimen/dp_1" android:layout_height="@dimen/dp_20" android:src="@drawable/app_widget_line" android:contentDescription="line" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llAWAuto" android:layout_width="@dimen/dp_82" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/awTvAuto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ssAutomaticVolume" android:drawableTop="@drawable/app_widget_icon_auto" android:drawablePadding="@dimen/dp_4" />
+        </LinearLayout>
+        <ImageView android:id="@id/awLine3" android:layout_width="@dimen/dp_1" android:layout_height="@dimen/dp_20" android:src="@drawable/app_widget_line" android:contentDescription="line" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/llAWFind" android:layout_width="@dimen/dp_82" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/sp_10" android:textColor="@color/white_60" android:id="@id/awTvFind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ssFindGlasses" android:drawableTop="@drawable/app_widget_icon_find" android:drawablePadding="@dimen/dp_4" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

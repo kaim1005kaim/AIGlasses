@@ -1,0 +1,38 @@
+.class public final Lcom/xiaomi/aivs/R$raw;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xiaomi/aivs/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "raw"
+.end annotation
+
+
+# static fields
+.field public static final asr_final:I = 0x7f120000
+
+.field public static final dialog_exit:I = 0x7f120001
+
+.field public static final network_error:I = 0x7f120002
+
+.field public static final nlp_wait:I = 0x7f120003
+
+.field public static final standby_enter:I = 0x7f120004
+
+.field public static final weather_test:I = 0x7f120005
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
