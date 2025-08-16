@@ -1,0 +1,207 @@
+.class final Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/FlowCollector;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlinx/coroutines/flow/FlowCollector<",
+        "Lcom/superhexa/supervision/library/net/retrofit/DataResult<",
+        "+",
+        "Lcom/superhexa/supervision/library/base/domain/model/AliveState;",
+        ">;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u000e\u0010\u0002\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u0003H\u008a@"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "it",
+        "Lcom/superhexa/supervision/library/net/retrofit/DataResult;",
+        "Lcom/superhexa/supervision/library/base/domain/model/AliveState;"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;
+
+.field final synthetic b:Ljava/lang/Long;
+
+
+# direct methods
+.method constructor <init>(Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;Ljava/lang/Long;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;
+
+    iput-object p2, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->b:Ljava/lang/Long;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/superhexa/supervision/library/net/retrofit/DataResult;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
+    .param p1    # Lcom/superhexa/supervision/library/net/retrofit/DataResult;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/superhexa/supervision/library/net/retrofit/DataResult<",
+            "Lcom/superhexa/supervision/library/base/domain/model/AliveState;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lkotlin/Unit;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    invoke-virtual {p1}, Lcom/superhexa/supervision/library/net/retrofit/DataResult;->isSuccess()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p1}, Lcom/superhexa/supervision/library/net/retrofit/DataResult;->getData()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/superhexa/supervision/library/base/domain/model/AliveState;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lcom/superhexa/supervision/library/base/domain/model/AliveState;->getLiveStatus()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    sget-object p2, Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;->AliveStart:Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;
+
+    invoke-virtual {p2}, Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;->getState()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p2, Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;->Aliving:Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;
+
+    invoke-virtual {p2}, Lcom/superhexa/supervision/library/base/domain/model/AliveStatus;->getState()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_1
+    iget-object p2, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;
+
+    invoke-static {p2}, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;->x(Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;)Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object p2
+
+    new-instance v0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1$emit$2;
+
+    iget-object v1, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->b:Ljava/lang/Long;
+
+    invoke-direct {v0, v1, p1}, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1$emit$2;-><init>(Ljava/lang/Long;Z)V
+
+    invoke-static {p2, v0}, Lcom/superhexa/supervision/library/base/basecommon/extension/MutableLiveDataExtensionKt;->c(Landroidx/lifecycle/MutableLiveData;Lkotlin/jvm/functions/Function1;)V
+
+    if-eqz p1, :cond_3
+
+    iget-object p0, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;
+
+    invoke-static {p0}, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;->F(Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/superhexa/supervision/library/net/retrofit/DataResult;->isError()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p0, p0, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;
+
+    invoke-static {p0}, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;->x(Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel;)Landroidx/lifecycle/MutableLiveData;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1$emit$3;->a:Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1$emit$3;
+
+    invoke-static {p0, p1}, Lcom/superhexa/supervision/library/base/basecommon/extension/MutableLiveDataExtensionKt;->c(Landroidx/lifecycle/MutableLiveData;Lkotlin/jvm/functions/Function1;)V
+
+    :cond_3
+    :goto_2
+    sget-object p0, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/superhexa/supervision/library/net/retrofit/DataResult;
+
+    invoke-virtual {p0, p1, p2}, Lcom/superhexa/supervision/feature/home/presentation/home/HomeViewModel$getAliveState$1$1;->a(Lcom/superhexa/supervision/library/net/retrofit/DataResult;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

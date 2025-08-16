@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/xiaomi/mis/proxy_device/MisProxyDeviceManager$IMisDeviceListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/xiaomi/mis/proxy_device/MisProxyDeviceManager;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "IMisDeviceListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onDeviceChanged(Ljava/lang/String;)V
+.end method
+
+.method public abstract reportSpec(Ljava/lang/String;)V
+.end method

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatButton android:textSize="@dimen/sp_13" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/manageFiles" android:background="@drawable/shape_guide_button_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_48" android:layout_marginTop="@dimen/dp_30" android:text="@string/manageFiles" android:layout_marginStart="@dimen/dp_28" android:layout_marginEnd="@dimen/dp_28" />
+</FrameLayout>

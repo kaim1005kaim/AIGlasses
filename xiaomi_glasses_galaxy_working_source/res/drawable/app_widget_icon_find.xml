@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$app_widget_icon_find__0" android:pathData="M18.905,16.832L16.828,14.762C17.497,13.726 17.886,12.495 17.886,11.17C17.886,7.509 14.922,4.545 11.261,4.545C7.601,4.545 4.637,7.513 4.637,11.17C4.637,14.83 7.601,17.794 11.261,17.794C12.588,17.794 13.825,17.403 14.861,16.732L16.935,18.799C17.524,19.386 18.444,19.423 18.988,18.882C19.53,18.34 19.493,17.42 18.905,16.832ZM11.258,15.59C8.821,15.59 6.841,13.614 6.841,11.173C6.841,8.736 8.817,6.757 11.258,6.757C13.698,6.757 15.674,8.733 15.674,11.173C15.67,13.614 13.694,15.59 11.258,15.59Z" />
+</vector>

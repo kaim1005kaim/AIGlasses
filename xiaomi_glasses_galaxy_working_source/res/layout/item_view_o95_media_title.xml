@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="15.0sp" android:textStyle="normal" android:textColor="@color/white_80" android:gravity="center" android:id="@id/timeTitle" android:layout_width="wrap_content" android:layout_height="@dimen/dp_44" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp_20" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/sp_12" android:textColor="@color/white_80" android:gravity="center" android:id="@id/tvAllSelect" android:background="@drawable/bg_oval_black_21" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:text="@string/allSelect" android:layout_centerVertical="true" android:paddingStart="@dimen/dp_12" android:paddingEnd="@dimen/dp_12" android:layout_marginEnd="@dimen/dp_20" android:layout_alignParentEnd="true" />
+</RelativeLayout>

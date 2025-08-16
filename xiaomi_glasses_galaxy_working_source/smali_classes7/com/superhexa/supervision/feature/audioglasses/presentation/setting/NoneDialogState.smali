@@ -1,0 +1,69 @@
+.class public final Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/NoneDialogState;
+.super Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/SettingDialogState;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
+
+.annotation build Landroidx/compose/runtime/internal/StabilityInferred;
+    parameters = 0x0
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0007\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"
+    }
+    d2 = {
+        "Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/NoneDialogState;",
+        "Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/SettingDialogState;",
+        "()V",
+        "feature_audioglasses_appRelease"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 8
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    const/16 v6, 0xe
+
+    const/4 v7, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/SettingDialogState;-><init>(ILcom/superhexa/supervision/feature/audioglasses/presentation/setting/GestureKey;Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/Temple;Lcom/superhexa/supervision/feature/audioglasses/presentation/setting/GestureType;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method

@@ -1,0 +1,789 @@
+.class public Lcom/xiaomi/ai/api/intent/domain/Poem;
+.super Lcom/xiaomi/ai/api/intent/IntentionEntity;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T::",
+        "Lcom/xiaomi/ai/api/intent/EntityType;",
+        ">",
+        "Lcom/xiaomi/ai/api/intent/IntentionEntity<",
+        "TT;",
+        "Lcom/xiaomi/ai/api/intent/general;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private dynasty:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private name:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private poet:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private property:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private tag:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private type:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private verse:Lcom/xiaomi/common/Optional;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/xiaomi/ai/api/intent/IntentionEntity;-><init>()V
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->poet:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->name:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->dynasty:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->type:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->tag:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->verse:Lcom/xiaomi/common/Optional;
+
+    invoke-static {}, Lcom/xiaomi/common/Optional;->empty()Lcom/xiaomi/common/Optional;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->property:Lcom/xiaomi/common/Optional;
+
+    return-void
+.end method
+
+.method public static read(Lcom/fasterxml/jackson/databind/JsonNode;Lcom/xiaomi/common/Optional;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/JsonNode;",
+            "Lcom/xiaomi/common/Optional<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/reflect/InvocationTargetException;,
+            Ljava/lang/NoSuchMethodException;,
+            Ljava/lang/IllegalAccessException;,
+            Lcom/fasterxml/jackson/core/JsonProcessingException;
+        }
+    .end annotation
+
+    new-instance p1, Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    invoke-direct {p1}, Lcom/xiaomi/ai/api/intent/domain/Poem;-><init>()V
+
+    const-string v0, "poet"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    const-class v2, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setPoet(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_0
+    const-string v0, "name"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setName(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_1
+    const-string v0, "dynasty"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setDynasty(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_2
+    const-string v0, "type"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setType(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_3
+    const-string v0, "tag"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setTag(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_4
+    const-string v0, "verse"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setVerse(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_5
+    const-string v0, "property"
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object p0
+
+    invoke-static {p0, v2}, Lcom/xiaomi/ai/api/intent/IntentUtils;->readSlot(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/Class;)Lcom/xiaomi/ai/api/intent/Slot;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Lcom/xiaomi/ai/api/intent/domain/Poem;->setProperty(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+
+    :cond_6
+    return-object p1
+.end method
+
+.method public static write(Lcom/xiaomi/ai/api/intent/domain/Poem;)Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/reflect/InvocationTargetException;,
+            Ljava/lang/NoSuchMethodException;,
+            Ljava/lang/IllegalAccessException;
+        }
+    .end annotation
+
+    sget-object v0, Lcom/xiaomi/ai/api/intent/IntentUtils;->objectMapper:Lcom/fasterxml/jackson/databind/ObjectMapper;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/ObjectMapper;->createObjectNode()Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->poet:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->poet:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "poet"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_0
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->name:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->name:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "name"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_1
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->dynasty:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->dynasty:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "dynasty"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_2
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->type:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->type:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "type"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_3
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->tag:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->tag:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "tag"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_4
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->verse:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->verse:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {v1}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object v1
+
+    const-string v2, "verse"
+
+    invoke-virtual {v0, v2, v1}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_5
+    iget-object v1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->property:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {v1}, Lcom/xiaomi/common/Optional;->isPresent()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->property:Lcom/xiaomi/common/Optional;
+
+    invoke-virtual {p0}, Lcom/xiaomi/common/Optional;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/xiaomi/ai/api/intent/Slot;
+
+    invoke-static {p0}, Lcom/xiaomi/ai/api/intent/IntentUtils;->writeSlot(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/fasterxml/jackson/databind/node/ObjectNode;
+
+    move-result-object p0
+
+    const-string v1, "property"
+
+    invoke-virtual {v0, v1, p0}, Lcom/fasterxml/jackson/databind/node/ObjectNode;->put(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonNode;)Lcom/fasterxml/jackson/databind/JsonNode;
+
+    :cond_6
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected __1()Lcom/xiaomi/ai/api/intent/EntityType;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    new-instance p0, Lcom/xiaomi/ai/api/intent/general;
+
+    invoke-direct {p0}, Lcom/xiaomi/ai/api/intent/general;-><init>()V
+
+    return-object p0
+.end method
+
+.method public getDynasty()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->dynasty:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getName()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->name:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getPoet()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->poet:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getProperty()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->property:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getTag()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->tag:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getType()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->type:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public getVerse()Lcom/xiaomi/common/Optional;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/xiaomi/common/Optional<",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->verse:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setDynasty(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->dynasty:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setName(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->name:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setPoet(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->poet:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setProperty(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->property:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setTag(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->tag:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setType(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->type:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method
+
+.method public setVerse(Lcom/xiaomi/ai/api/intent/Slot;)Lcom/xiaomi/ai/api/intent/domain/Poem;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/xiaomi/ai/api/intent/Slot<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/xiaomi/ai/api/intent/domain/Poem;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Lcom/xiaomi/common/Optional;->ofNullable(Ljava/lang/Object;)Lcom/xiaomi/common/Optional;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/ai/api/intent/domain/Poem;->verse:Lcom/xiaomi/common/Optional;
+
+    return-object p0
+.end method

@@ -1,0 +1,131 @@
+<!--debug属性用来决定是否打印logback的日志信息-->
+<configuration debug='false'>
+
+    <!--声明一个属性,用来指定log文件存放的路径-->
+    <property name="LOG_DIR" value="${DATA_DIR}/log" />
+
+    <!--声明一个时间戳-->
+    <timestamp datePattern="yyyyMMdd" key="today" />
+
+    <!--用于在控制台输出的Appender-->
+    <appender name="LOGCAT" class="ch.qos.logback.classic.android.LogcatAppender">
+        <encoder>
+            <pattern>%date %-5relative [%thread] %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--声明一个FileAppender-->
+    <appender name="BASE_FILE" class="ch.qos.logback.core.FileAppender">
+        <!--初始化的时候不创建文件,在第一次使用的时候创建文件-->
+        <lazy>true</lazy>
+        <!--log追加到文件,否则覆盖文件-->
+        <append>true</append>
+        <!--用来保存log的文件全路径-->
+        <file>${LOG_DIR}/base.log</file>
+        <!--输出log的格式-->
+        <encoder>
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} [%file:%line] - %msg%n</pattern>-->
+            <pattern>%date [%thread] %-5level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--声明一个RollingFileAppender-->
+    <appender name="BASE_ROLL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+<!--        <file>${LOG_DIR}/base.roll.${today}.log</file>-->
+        <file>${LOG_DIR}/base.roll.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %-5relative [%thread] %-5level - %msg%n</pattern>
+        </encoder>
+<!--    当为true时，不支持FixedWindowRollingPolicy。支持TimeBasedRollingPolicy，但是有两个限制，1不支持也不允许文件压缩，2不能设置file属性，必须留空-->
+        <prudent>false</prudent>
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash;日志文件输出的文件名&ndash;&gt;-->
+<!--            <FileNamePattern>${LOG_HOME}/info.%d{yyyyMMdd}.%i.log</FileNamePattern>-->
+<!--            &lt;!&ndash; 日志文件最大尺寸 &ndash;&gt;-->
+<!--            <maxFileSize>100k</maxFileSize>-->
+<!--            &lt;!&ndash;日志文件保留天数&ndash;&gt;-->
+<!--            <MaxHistory>30</MaxHistory>-->
+<!--        </rollingPolicy>-->
+
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>${LOG_DIR}/base.roll.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+<!--            <maxFileSize>100k</maxFileSize>-->
+<!--            &lt;!&ndash;最大保存?天的日志&ndash;&gt;-->
+<!--            <maxHistory>30</maxHistory>-->
+<!--        </rollingPolicy>-->
+        <!-- 日志文件的文件最大大小和文件总数目 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/base.roll.%i.log.gz</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>5</maxIndex>
+        </rollingPolicy>
+        <!--        https://blog.csdn.net/qq_36838191/article/details/86536317
+                        TimeBasedRollingPolicy 和 SizeBasedTriggeringPolicy 策略有冲突，导致最大日志文件2 M，并且不生成新文件，所以调整
+        -->
+        <!--文件大于?mb,切换文件-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>8MB</maxFileSize>
+        </triggeringPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 异步日志输出配置 -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 将滚动文件日志的 appender 引用作为异步日志的目标 -->
+        <appender-ref ref="BASE_ROLL_FILE" />
+    </appender>
+
+    <!--指定logtest采用BASE_ROLL_FILE声明的RollingFileAppender输出日志-->
+    <logger name="hexalogger">
+        <appender-ref ref="BASE_ROLL_FILE" />
+    </logger>
+
+    <!-- Write INFO (and higher-level) messages to the log file -->
+    <root level="TRACE">
+        <appender-ref ref="BASE_ROLL_FILE" />
+    </root>
+
+    <!--支持的level-->
+    <!--TRACE-->
+    <!--DEBUG-->
+    <!--INFO-->
+    <!--WARN-->
+    <!--ERROR-->
+
+    <!--<pattern>
+      %d{yyyy-MM-dd HH:mm:ss} [%level] - %msg%n
+      Logger: %logger
+      Class: %class
+      File: %file
+      Caller: %caller
+      Line: %line
+      Message: %m
+      Method: %M
+      Relative: %relative
+      Thread: %thread
+      Exception: %ex
+      xException: %xEx
+      nopException: %nopex
+      rException: %rEx
+      Marker: %marker
+      %n
+  </pattern>-->
+
+    <!--引用其他位置的配置信息-->
+    <!--<includes>-->
+    <!--<include file="/sdcard/foo.xml"/>-->
+    <!--<include resource="assets/config/test.xml"/>-->
+    <!--<include resource="AndroidManifest.xml"/>-->
+
+    <!--<include file="/sdcard/logback/logback-test.xml"/>-->
+    <!--<include file="/sdcard/logback/logback.xml"/>-->
+    <!--<include resource="AndroidManifest.xml"/>-->
+    <!--<include resource="assets/logback-test.xml"/>-->
+    <!--<include resource="assets/logback.xml"/>-->
+    <!--</includes>-->
+</configuration>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_switch">#1affffff</color>
+    <color name="passport_common_app_color_primary">#ff0d84ff</color>
+    <color name="passport_common_edit_bg">#14ffffff</color>
+    <color name="passport_common_edit_hint_text">#4dffffff</color>
+    <color name="passport_common_round_button_bg_disabled">#26ffffff</color>
+    <color name="passport_common_round_button_bg_normal">#26ffffff</color>
+    <color name="passport_common_round_button_bg_pressed">#36ffffff</color>
+    <color name="passport_common_round_button_text_disabled">#4dffffff</color>
+    <color name="passport_common_round_button_text_enabled">#b3ffffff</color>
+    <color name="passport_common_text_major">#ccffffff</color>
+    <color name="passport_common_text_minor">#80ffffff</color>
+    <color name="passport_common_text_primary">#e6ffffff</color>
+    <color name="passport_common_text_secondary">#80ffffff</color>
+    <color name="passport_common_window_background_color">#ff000000</color>
+    <color name="passport_dialog_bg">#ff242424</color>
+    <color name="passport_dialog_list_item_selected_bg">#331369e9</color>
+    <color name="passport_highlight_round_button_bg_disabled">#26ffffff</color>
+    <color name="passport_highlight_round_button_bg_normal">#ff0073dd</color>
+    <color name="passport_highlight_round_button_bg_pressed">#ff147ee0</color>
+    <color name="passport_highlight_round_button_text_disabled">#ffffffff</color>
+    <color name="passport_layout_alphabet_indexer_bg">#ff191919</color>
+    <color name="passport_layout_alphabet_indexer_text_color">#e6ffffff</color>
+    <color name="passport_phone_number_card_small_bg">#ff242424</color>
+    <color name="passport_sns_login_title_divider">#26ffffff</color>
+</resources>

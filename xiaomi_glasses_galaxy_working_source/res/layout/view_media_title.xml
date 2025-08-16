@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@color/white_80" android:gravity="center" android:id="@id/timeTitle" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp_30" />
+    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/white_80" android:gravity="center" android:id="@id/tvCancel" android:background="@drawable/bg_oval_black_21" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:text="@string/libs_cancel" android:layout_centerVertical="true" android:paddingStart="@dimen/dp_15" android:paddingEnd="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_30" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="@dimen/sp_12" android:textColor="@color/white_80" android:gravity="center" android:id="@id/tvAllSelect" android:background="@drawable/bg_oval_black_21" android:layout_width="wrap_content" android:layout_height="@dimen/dp_30" android:text="@string/allSelect" android:layout_centerVertical="true" android:paddingStart="@dimen/dp_15" android:paddingEnd="@dimen/dp_15" android:layout_marginEnd="@dimen/dp_30" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition app:constraintSetEnd="@id/connected" app:constraintSetStart="@id/connecting" app:duration="800" />
+    <ConstraintSet android:id="@id/connecting">
+        <Constraint android:id="@id/ivDevice" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@mipmap/ic_home_device" android:alpha="0.3" android:translationY="@dimen/dp_49" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@id/connected">
+        <Constraint android:id="@id/ivDevice" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@mipmap/ic_home_device" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+</MotionScene>

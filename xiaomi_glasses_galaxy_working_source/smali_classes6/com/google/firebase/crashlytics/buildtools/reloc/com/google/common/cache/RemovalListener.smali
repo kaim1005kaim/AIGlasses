@@ -1,0 +1,34 @@
+.class public interface abstract Lcom/google/firebase/crashlytics/buildtools/reloc/com/google/common/cache/RemovalListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lcom/google/firebase/crashlytics/buildtools/reloc/com/google/common/annotations/GwtCompatible;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
+
+
+# virtual methods
+.method public abstract onRemoval(Lcom/google/firebase/crashlytics/buildtools/reloc/com/google/common/cache/RemovalNotification;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/firebase/crashlytics/buildtools/reloc/com/google/common/cache/RemovalNotification<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
+.end method

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.superhexa.supervision.feature.home.presentation.view.WrapNestedScrollableHost android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipeRefreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/loadingView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_85" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.3" app:lottie_autoPlay="true" app:lottie_fileName="loading.json" app:lottie_loop="true" />
+</com.superhexa.supervision.feature.home.presentation.view.WrapNestedScrollableHost>

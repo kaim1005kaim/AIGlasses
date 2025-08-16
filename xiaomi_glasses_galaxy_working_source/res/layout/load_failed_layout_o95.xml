@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="vertical" android:id="@id/llError" android:background="@color/pageBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="15.0sp" android:textColor="@color/white_40" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/libs_download_failed" android:drawableTop="@drawable/ic_o95_not_found_icon" android:drawablePadding="14.0dip" />
+</androidx.appcompat.widget.LinearLayoutCompat>

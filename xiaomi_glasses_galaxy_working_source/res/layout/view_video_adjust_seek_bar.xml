@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.superhexa.supervision.library.base.customviews.videoadjustseekbar.VideoFrameScrollBar android:id="@id/videoFramet" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/viewSelect" android:background="@drawable/bg_stroke_black" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginStart="@dimen/dp_40" android:layout_marginEnd="@dimen/dp_40" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <View android:id="@id/viewProgress" android:background="@color/blue_2f0aef" android:layout_width="@dimen/dp_1" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="@id/viewSelect" />
+</androidx.constraintlayout.widget.ConstraintLayout>
