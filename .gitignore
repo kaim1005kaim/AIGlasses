@@ -38,4 +38,5 @@ xiaomi_glasses_official_decoded/
 *.zip
 *.bin
 *.prof
-*.profm
+*.profmxiaomi_glasses_final/a20_compatible_build/
+*.so
